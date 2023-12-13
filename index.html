@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .blue-row th {
+      background-color: blue;
+      color: white;
+    }
+
+    .red-row th {
+      background-color: red;
+      color: white;
+    }
+
+    .yellow-row th {
+      background-color: yellow;
+      color: black;
+    }
+
+    .grey-cell {
+      background-color: grey !important;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr class="blue-row">
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="red-row">
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr class="yellow-row">
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    if (e.target.tagName === "TD") {
+      e.target.classList.add("grey-cell");
+    }
+  });
+</script>
+
+</body>
+</html>
